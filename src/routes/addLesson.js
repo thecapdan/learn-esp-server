@@ -7,10 +7,33 @@ export const addLesson = {
   handler: (req, res) => {
     // todo - replace hardcoding with admin gui
     const lesson = new Lesson({
-      id: 3,
-      name: "More-Verbs",
-      intro: "This is an intro to more-verbs",
-      exercise: "This is an exercise on more-verbs",
+      id: 1,
+      name: "Verbs",
+      intro: "This is an intro to verbs",
+      vocabulary: [
+        {
+          eng: "something",
+          esp: "algo",
+        },
+        {
+          eng: "to eat",
+          esp: "comer",
+        },
+        {
+          eng: "please",
+          esp: "por favor",
+        },
+      ],
+      exercise: [
+        {
+          eng: "I want to eat something different",
+          esp: "Quiero comer algo diferente",
+        },
+        {
+          eng: "I need to see the doctor please",
+          esp: "Necesito ver al doctor por favor",
+        },
+      ],
     });
 
     lesson

@@ -16,10 +16,18 @@ const lessonsSchema = new Schema(
       type: String,
       required: true,
     },
-    exercise: {
-      type: String,
-      required: true,
-    },
+    vocabulary: [
+      {
+        eng: "string",
+        esp: "string",
+      },
+    ],
+    exercise: [
+      {
+        eng: "string",
+        esp: "string",
+      },
+    ],
     // upsert prevents duplicate ids (unique)
   },
   { timestamps: true, upsert: true }
