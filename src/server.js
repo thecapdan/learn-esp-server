@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 const app = express();
 app.use(express.json());
 
-// use cd21 for writing
+// use cd21 for write
 const dbURI =
   "mongodb+srv://readonly:readonly@cluster0.qtarf.mongodb.net/learn-esp?retryWrites=true&w=majority";
 mongoose
