@@ -6,6 +6,7 @@ export const addLesson = {
   path: "/add-lesson",
   handler: (req, res) => {
     // todo - replace hardcoding with admin gui
+    /*
     const lesson = new Lesson({
       id: 1,
       name: "Verbs",
@@ -49,5 +50,6 @@ export const addLesson = {
           console.log(err);
         }
       });
+      */
   },
 };

@@ -5,16 +5,16 @@ export const updateLesson = {
   method: "post",
   path: "/update-lesson",
   handler: (req, res) => {
-    // todo - replace hardcoding with admin gui
-
     const updateInfo = req.body;
+
+    console.log(updateInfo);
 
     const lessonId = updateInfo.id;
     const recordName = updateInfo.record;
-    const newRecordValue = updateInfo.phrase;
 
     // TODO move logic to models folder
     if (recordName === "exercise" || recordName == "vocabulary") {
+      const newRecordValue = updateInfo.phrase;
       Lesson.updateOne(
         { id: lessonId },
         { $addToSet: { [recordName]: newRecordValue } },
@@ -29,9 +29,10 @@ export const updateLesson = {
         res.send(result.status);
       });
     } else if (recordName === "intro") {
+      const newIntro = updateInfo.intro;
       Lesson.updateOne(
         { id: lessonId },
-        { [recordName]: newRecordValue },
+        { [recordName]: newIntro },
         function (err, docs) {
           if (err) {
             console.log(err);
