@@ -30,6 +30,10 @@ export const addLesson = {
           eng: "I need to see the doctor please",
           esp: "Necesito ver al doctor por favor",
         },
+        {
+          eng: "del",
+          esp: "del",
+        },
       ],
     });
 
