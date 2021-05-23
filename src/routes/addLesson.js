@@ -8,9 +8,9 @@ export const addLesson = {
     // todo - replace hardcoding with admin gui
     /*
     const lesson = new Lesson({
-      id: 1,
-      name: "Verbs",
-      intro: "This is an intro to verbs",
+      id: 4,
+      name: "Practice",
+      intro: "Empty",
       vocabulary: [
         {
           eng: "something",
@@ -19,10 +19,6 @@ export const addLesson = {
         {
           eng: "to eat",
           esp: "comer",
-        },
-        {
-          eng: "please",
-          esp: "por favor",
         },
       ],
       exercise: [
